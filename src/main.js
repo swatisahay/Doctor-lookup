@@ -10,8 +10,10 @@ $(document).ready(function() {
   $('#doctor').click(function() {
     let medicalIssue= $('#issue').val();
     let name= $('#name').val();
+    let city= $('#city').val();
     $('#issue').val("");
     $('#name').val("");
+    $('#city').val("");
 
     function showResults(response){
       if (response.data.length==0) {
@@ -29,6 +31,6 @@ $(document).ready(function() {
       $('#errors').text("There was an error processing your request. Please try again.");
     }
 
-    Doctor.getData(medicalIssue, name, showResults, error);
+    Doctor.getData(medicalIssue, name, city, showResults, error);
   });
 });
