@@ -23,7 +23,7 @@ $(document).ready(function() {
       // console.log(detail);
       for (let i = 0; i < response.data.length; i++) {
 
-        $('.showDetails').append(`<li>Doctor:${response.data[i].profile.first_name} ${response.data[i].profile.last_name}<br>Address:${response.data[i].practices[0].visit_address.street} <br>Phone:${response.data[i].practices[0].phones[0].number}<br>Websites:${response.data[i].practices[0].website}<br>Accepts new patients:${response.data[i].practices[0].accepts_new_patients}</li>`);
+        $('.showDetails').append(`<li>Doctor:${response.data[i].profile.first_name} ${response.data[i].profile.last_name}<br>Address:${response.data[i].practices[0].visit_address.street} ${response.data[i].practices[0].visit_address.city} <br>Phone:${response.data[i].practices[0].phones[0].number}<br>Websites:${response.data[i].practices[0].website}<br>Accepts new patients:${response.data[i].practices[0].accepts_new_patients}</li>`);
       }
 
     }
